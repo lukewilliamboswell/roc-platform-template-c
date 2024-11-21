@@ -1,4 +1,5 @@
 # example application
-app [main] { pf: platform "platform/main.roc" }
+app [main!] { pf: platform "platform/main.roc" }
 
-main = "Roc loves C\n"
+main! : {} => Str
+main! = \{} -> "Roc loves C\n"

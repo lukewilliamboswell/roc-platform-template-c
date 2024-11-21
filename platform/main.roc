@@ -1,9 +1,9 @@
 platform ""
-    requires {} { main : Str }
+    requires {} { main! : {} => Str }
     exposes []
     packages {}
     imports []
-    provides [mainForHost]
+    provides [mainForHost!]
 
-mainForHost : Str
-mainForHost = main
+mainForHost! : I32 => Str
+mainForHost! = \_notused -> main! {}
